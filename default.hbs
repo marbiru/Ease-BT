@@ -6,48 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  
+=======
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Nav.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
+>>>>>>> a33387bed2e3899fcbb081183d5bf4250ff38db8
     {{ghost_head}}
 </head>
 
 <body class="{{body_class}}{{block "body_class"}} is-head-b--n{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
 <div class="site">
-
-    <header id="gh-head" class="gh-head gh-outer">
-    <div class="gh-head-inner gh-inner">
-
-        <div class="gh-head-brand">
-            <div class="gh-head-brand-wrapper">
-                <a class="gh-head-logo" href="{{@site.url}}">
-                    {{#if @site.logo}}
-                        <img src="{{@site.logo}}" alt="{{@site.title}}">
-                    {{else}}
-                        {{@site.title}}
-                    {{/if}}
-                </a>
-            </div>
-            <button class="gh-burger"></button>
+<<<<<<< HEAD
+       <nav class="defaultnav">
+=======
+       <nav>
+>>>>>>> a33387bed2e3899fcbb081183d5bf4250ff38db8
+      <div class="brand">
+        <h3>Ease</h3>
+      </div>
+      <div class="navigation">
+        <ul class="menu">
+          {{navigation}}
+        </ul>
+        <div class="search">
+          <div class="search-content">
+            <button class="search-button"><i class="fa fa-search"></i></button>
+            <input type="text" class="search-input" placeholder="Search here...">
+          </div>
         </div>
+      </div>
+    </nav>
 
-        <nav class="gh-head-menu">
-            {{navigation}}
-        </nav>
+ 
 
     </div>
     </header>
 
-    {{#is "home"}}
-    <div class="site-cover{{#unless @site.cover_image}} no-image{{/unless}} u-overlay">
-
-        {{#if @site.cover_image}}
-            <img class="cover-image jarallax-img u-object-fit" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
-        {{/if}}
-
-       
-
-    </div>
-    {{/is}}
-
+   
     <div class="site-content">
         {{{body}}}
     </div>
